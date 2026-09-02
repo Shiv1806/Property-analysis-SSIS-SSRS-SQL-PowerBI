@@ -1,0 +1,13 @@
+# Operating-system and IDE clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vs/
+
+# Environment-specific database and video files are intentionally excluded
+*.bak
+*.mp4
+
+# Temporary files
+*.tmp
+*.bak~
