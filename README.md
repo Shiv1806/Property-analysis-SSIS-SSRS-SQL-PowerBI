@@ -20,10 +20,10 @@ The outcome is a reporting model that helps a user move from a geographic view t
 | --- | --- |
 | Source data | Raw Excel inputs for geography, property values, rental values, schools, transport and crime |
 | SSIS | The actual `.dtsx` package, plus control-flow and data-load captures |
-| Warehouse | Captured dimensional schema and bus-matrix evidence |
+| Warehouse | Captured dimensional schema |
 | SQL | Actual property-analysis queries |
 | SSRS | An `.rdl` definition, five exported reports and preview images |
-| Power BI | Four original `.pbix` reports and dashboard screenshots |
+| Power BI | original `.pbix` reports and dashboard screenshots |
 
 ## Data in the wild: what had to be standardised
 
@@ -44,7 +44,7 @@ The source files also mix `suburb`, `Suburb` and `SUBURB` values, and use differ
 
 The included SSIS package shows local-file/Excel ingestion, staging tables, data conversion, dimensional loads and fact-table lookups. Its control flow covers geography, property, schools, years and categories. The advanced source captures also show multi-state rental, school and transport feeds being combined with **Union All** before loading a common staging layer.
 
-![Actual SSIS control flow](02-ssis-etl/evidence/ssis-control-flow.png)
+![Actual SSIS control flow](02-ssis-etl/Screenshots_Workflow/01-control-flow.png)
 
 The package includes lookups to `Dim_Aus_Geography`, `Dim_Property`, `Dim_Aus_School`, `Dim_Year` and `Dim_Category` before loading the fact table. This makes the model usable for filtering and comparing data consistently across subject areas.
 
@@ -52,11 +52,10 @@ The package includes lookups to `Dim_Aus_Geography`, `Dim_Property`, `Dim_Aus_Sc
 
 ## Warehouse model
 
-The captured model evidence records a dimensional approach: shared geography and subject-area dimensions support facts for the property analysis workflow.
 
-![Warehouse model evidence](03-data-warehouse/evidence/warehouse-schema.png)
+![Warehouse model evidence](03-data-warehouse/warehouse-schema.png)
 
-The bus-matrix capture is retained in [03-data-warehouse/evidence](03-data-warehouse/evidence/) alongside the model image.
+
 
 ## SQL analysis
 
