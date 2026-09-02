@@ -59,7 +59,7 @@ The package includes lookups to `Dim_Aus_Geography`, `Dim_Property`, `Dim_Aus_Sc
 
 ## SQL analysis
 
-The [property analysis SQL script](04-sql/property_analysis_queries.sql) is the original query work. It:
+The [property analysis SQL script](04-sql/SQL_Property_Analysis_Advanced_Final.sql) is the original query work. It:
 
 - counts cities by state from `AUS_Post_suburb`;
 - counts unique suburbs and postcodes by city; and
@@ -95,10 +95,9 @@ With the controls set to **All**, this captured page shows 4,004 properties in t
 
 ### Open the original reports
 
-- [Advance Task 5 - SSRS linked to Power BI](06-powerbi/reports/Advance%20Task%205%20SSRS%20linking%20to%20Power%20Bi.pbix)
-- [Advanced Property Analysis report](06-powerbi/reports/Advance%20Task%20Part%204%20Power%20Bi%20report.pbix)
-- [Property Analysis dashboard](06-powerbi/reports/Property%20Analysis%20Power%20BI%20Dashboard.pbix)
-- [Competition Sprint report](06-powerbi/reports/Task%202%20Competition%20Sprint.pbix)
+- [Advance Task 5 - SSRS linked to Power BI](06-powerbi/reports/Advance Task 5 SSRS linking to Power Bi.pbix)
+- [Property Analysis dashboard 2](06-powerbi/reports/Property analysis dashboard 2.pbix)
+- [Property Analysis dashboard](06-powerbi/reports/Property Analysis Power BI Dashboard.pbix)
 
 Open these files in Power BI Desktop. GitHub cannot preview a `.pbix`, which is why the screenshots above are included.
 
@@ -106,29 +105,14 @@ Open these files in Power BI Desktop. GitHub cannot preview a `.pbix`, which is 
 
 ```text
 property-analysis-bi/
-├── 01-data-sources/raw/           # Original advanced-sprint Excel inputs
-├── 02-ssis-etl/                   # Original SSIS package and evidence captures
-├── 03-data-warehouse/             # Model and bus-matrix evidence
+├── 01-data-sources/raw/           # Original Excel inputs
+├── 02-ssis-etl/                   # Original SSIS package and captures
+├── 03-data-warehouse/             # Model Schema
 ├── 04-sql/                         # Original property SQL queries
 ├── 05-ssrs-reporting/              # RDL, five PDF exports and previews
-├── 06-powerbi/                     # Four PBIX reports and screenshots
-├── assets/
+├── 06-powerbi/                     # PBIX reports and screenshots
 └── README.md
 ```
-
-## Run and review guide
-
-| File type | What an employer can do |
-| --- | --- |
-| `.sql` | Open and read every saved command in any editor; execute in SQL Server once the matching tables are loaded |
-| `.xlsx` | Inspect the original source data in Excel or another spreadsheet tool |
-| `.dtsx` | Open in Visual Studio/SSDT with SSIS tooling; replace local connection-manager paths before running |
-| `.rdl` / `.pdf` | Open the report definition in Report Builder/SSDT or inspect the delivered exports directly |
-| `.pbix` | Open the interactive reports in Power BI Desktop |
-
-## What is intentionally excluded
-
-MP4 recordings, database backup files, assignment instructions, solution documents, certificates, duplicate datasets and IDE cache files. They do not help a recruiter evaluate the solution and would make the repository slower and less focused.
 
 ## Next improvement
 
